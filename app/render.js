@@ -8,6 +8,7 @@ let blobs = [];
 // Buttons
 const videoElement = document.querySelector('video');
 
+
 const startBtn = document.getElementById('startBtn');
 startBtn.onclick = e => {
   captureScreenVideoWithAudio();

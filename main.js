@@ -34,3 +34,13 @@ app.whenReady().then(() => {
 app.on('window-all-closed', function () {
   if (process.platform !== 'darwin') app.quit()
 })
+global.startData = "data";
+// This will catch clicks on links such as <a href="foobar://abc=1">open in foobar</a>
+app.on('open-url', function (event, data) {
+  event.preventDefault();
+  global.startData = data;
+});
+
+app.setAsDefaultProtocolClient('zoomrxRecorder');
+
+// Export so you can access it from the renderer thread
