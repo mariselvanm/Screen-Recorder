@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>Hello World!</title>
+    <title>ZoomRx Recorder</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"
@@ -11,11 +11,20 @@
     <script defer src="render.js"></script>
   </head>
   <body class="content">
-    <h1>⚡ ZoomRx Recorder ⚡</h1>
+    <h1>&#128079; ZoomRx Recorder &#128079;</h1>
 
-    <video></video>
-
-    <button id="startBtn" class="button is-primary">Start</button>
-    <button id="stopBtn" class="button is-warning">Stop</button>
+    <div class="row">
+      <div class="column preview-window">
+        <h3>Preview Window</h3>
+        <video></video>
+      </div>
+      <div class="column">
+        <div class="button-group">
+          <button id="startBtn" class="button is-primary">Start</button>
+          <button id="stopBtn" class="button is-warning">Stop</button>
+          <button id="stopBtn" class="button is-success">Upload</button>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

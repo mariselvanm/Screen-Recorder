@@ -22,6 +22,12 @@ stopBtn.onclick = e => {
   startBtn.innerText = 'Start';
 };
 
+const cleanRecord = () => {
+  videoElement.pause();
+  videoElement.removeAttribute('src'); // empty source
+  videoElement.load();
+}
+
 function captureScreenVideoWithAudio() {
   navigator.webkitGetUserMedia({
     audio: true
@@ -66,6 +72,8 @@ function handleVideoStream(audioStream) {
       if (filePath) {
         writeFile(filePath, buffer, () => console.log('video saved successfully!'));
       }
+
+      cleanRecord();
     }
     recorder.start();
   };

@@ -5,9 +5,34 @@ body {
   }
   
   
+  .row {
+    display: flex;
+  }
+  
+  .column {
+    flex: 50%;
+  }
+
+  .button-group {
+    display: flex;
+    flex-direction: column;
+    padding-top: 32%;
+  }
+
+  .button {
+    margin-bottom: 20px;
+    width: 25%;
+    margin-left: 35%;
+  }
+
+  .preview-window {
+    margin-top: 64px;
+  }
+
   video {
     width: 100%;
     height: auto;
+    border: 1px solid gray;
   }
   
   body {
